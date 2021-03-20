@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:background="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div th:replace="fragments/fragments :: head"></div>
+    <title>Help</title>
+    <link th:href="help.css" th:rel="stylesheet">
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="row">
+
+    <div class="column" style="background-color:#aaa;">
+
+        <h2 style="text-align: center">Our Resources</h2>
+        <h5 style="text-align: center">Our ministry offers the following resources:</h5>
+        <ul>
+            <li>Awareness</li>
+            <li>Resources</li>
+            <li>Networking</li>
+            <li>Counseling</li>
+        </ul>
+        <hr>
+        <img src="./images/saveoursons-1.jpg" width="200" height="150"/>
+        <img src="./images/resource1.jpg" width="200" height="150"/>
+        <img src="./images/resource2.jpg" width="200" height="150"/>
+        <img src="./images/resource3.jpg" width="200" height="150"/>
+
+    </div>
+
+    <div class="column" style="background-color: #c2ccc5">
+
+        <h2 style="text-align: center">Contact Form</h2>
+        <h6 style="text-align: center">If you are the victim and need our help, please fill this form</h6>
+        <div class="container-column">
+            <form class="form" action="mailto:lfinney4047@gmail.com" method=”GET” target="_blank" id="gva-contact" accept-charset="UTF-8">
+                <div class="row">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname">
+                </div>
+
+                <div class="row">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname">
+                </div>
+
+                <div class="row">
+                    <label for="number">Contact Number</label>
+                    <input type="text" id="number" name="number">
+                </div>
+
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+                </div>
+
+                <div class="row">
+                    <label for="address"> Full Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+
+                <div class="row">
+                    <label for="subject">Specify the helps you are seeking for:</label>
+                    <textarea id="subject" name="body" placeholder="Please mention full name, contact number and help you need" rows="6"></textarea>
+                    <input type="submit" value="Send Message" /><br></div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

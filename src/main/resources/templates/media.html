@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:background="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="fragments/fragments :: head"></div>
+    <title>Media</title>
+
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="media">
+    <div class="media_header">
+<p> Media information </p>
+    </div>
+</div>
+<hr>
+
+<div class= "d-flex flex-row-reverse">
+
+
+<div class= "p-2">
+<iframe th:src="@{//rss.app/embed/v1/bagYWAkcpHWvkZEp}" width="600" height="700"  frameBorder="0"></iframe>
+</div>
+
+    <div class="p-2">
+        <p>This is where media information will be added</p>
+    </div>
+</div>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>
