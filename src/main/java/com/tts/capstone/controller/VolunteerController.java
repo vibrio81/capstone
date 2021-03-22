@@ -18,8 +18,8 @@ public class VolunteerController {
         return "volunteer";
     }
 
-    @RequestMapping(value = "/volunteer/new", method = {RequestMethod.GET, RequestMethod.POST})
-    public void register(@ModelAttribute Volunteer volunteer, Model model){
+    @RequestMapping(value = "/volunteer/new", method = {RequestMethod.POST, RequestMethod.GET})
+    public String register(@ModelAttribute Volunteer volunteer, Model model){
         model.addAttribute("name", volunteer.getName());
         model.addAttribute("dob", volunteer.getDob());
         model.addAttribute("phone", volunteer.getPhone());
@@ -27,6 +27,6 @@ public class VolunteerController {
         model.addAttribute("address", volunteer.getAddress());
         //model.addAttribute("volunteeringFor", volunteer.getVolunteeringFor());
         volunteerService.addVolunteer(volunteer);
+        return "result";
     }
-
 }
