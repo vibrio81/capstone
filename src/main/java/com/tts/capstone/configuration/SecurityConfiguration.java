@@ -2,6 +2,7 @@ package com.tts.capstone.configuration;
 
 
 
+import com.tts.capstone.service.AdminService;
 import com.tts.capstone.service.VolunteerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -22,10 +23,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    @Autowired
+    private AdminService adminService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-        auth.userDetailsService(volunteerService).passwordEncoder(bCryptPasswordEncoder);
+        auth.userDetailsService(adminService).passwordEncoder(bCryptPasswordEncoder);
     }
     @Override
     protected void configure(HttpSecurity http) throws Exception{

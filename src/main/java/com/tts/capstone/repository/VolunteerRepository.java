@@ -11,5 +11,5 @@ import java.util.Optional;
 public interface VolunteerRepository extends CrudRepository<Volunteer, Long> {
 
     Optional<Volunteer> findByEmail(String email);
-    Volunteer findByUsername(String username);
+//    Volunteer findByUsername(String username);
 }
